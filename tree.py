@@ -1,0 +1,46 @@
+# --- Baumarten ---
+
+# toter Baum 
+def draw_dead_tree():
+    print("                            '.,")
+    print("                              'b      *")
+    print("                               '$    #.")
+    print("                                $:   #:")
+    print("                                *#  @):")
+    print("                                :@,@):   ,.**:'")
+    print("                      ,         :@@*: ..**'")
+    print("                       '#o.    .:(@'.@*'")
+    print("                          'bq,..:,@@*'   ,*")
+    print("                          ,p$q8,:@)'  .p*'")
+    print("                         '    '@@Pp@@*'")
+    print("                               Y7'.'")
+    print("                              :@):.")
+    print("                             .:@:'.")
+    print("                           .::(@:.      -Sam Blumenstein-")
+
+# lebendiger Baum
+def draw_living_tree():
+    print("                     / / /")
+    print("                   /        /  /     //    /")
+    print("                /                 /         /  /")
+    print("                                /")
+    print("                               /                //")
+    print("               /          /            /              /")
+    print("               /            '/,        /               /")
+    print("               /              'b      *")
+    print("                /              '$    //                //")
+    print("               /    /           $:   /:               /")
+    print("             //      /  //      */  @):        /   / /")
+    print("                          /     :@,@):   ,/**:'   /")
+    print("              /      /,         :@@*: //**'      /   /")
+    print("                       '/o/    /:(@'/@*'  /")
+    print("               /  /       'bq,//:,@@*'   ,*      /  /")
+    print("                          ,p$q8,:@)'  /p*'      /")
+    print("                   /     '  / '@@Pp@@*'    /  /")
+    print("                    /  / //    Y7'.'     /  /")
+    print("                              :@):.")
+    print("                             .:@:'.")
+    print("                           .::(@:.      -Sam Blumenstein-")
+
+draw_dead_tree()
+# draw_living_tree()
