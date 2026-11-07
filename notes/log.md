@@ -15,3 +15,11 @@
 - "git commit -m "message"
 - "git log"
 - "git push" upload
+
+### Environment
+- "python3 -m venv .venv" create environment
+- "source .venv/bin/activate" activate
+- STRG + SHIFT + P choose it in VSCode
+- "deactivate" deactivate the envirnoment
+- "nano .gitignore" -> STRG + O to save -> STRG + X to exit
+- 

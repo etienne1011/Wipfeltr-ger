@@ -1,0 +1,6 @@
+# Umgebung
+.venv/
+
+# Python-Cache-Dateien
+__pycache__/
+*.pyc
