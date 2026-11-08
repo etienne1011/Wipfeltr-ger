@@ -38,3 +38,6 @@
 - https://github.com/public-api-lists/public-api-lists
 - https://apis.io/
 - https://bund.dev/
+
+### Streamlit
+- python -m streamlit run app.py

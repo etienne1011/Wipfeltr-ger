@@ -15,7 +15,7 @@ feinstaub = data["current"]["pm2_5"]
 # --- Logik ---
 
 health = max(0, min(100, 100 - schadstoffe)) # negative %, Fehler
-print("Waldgesundheit:", health)
+# print("Waldgesundheit:", health)
 
 anzahl_baeume = 100
 gesunde_baeume = int(anzahl_baeume * (health/100))

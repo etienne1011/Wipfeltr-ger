@@ -23,11 +23,17 @@ lon = orte[auswahl][1]
 # --- API-Abfrage ---
 url = f"https://air-quality-api.open-meteo.com/v1/air-quality?latitude={lat}&longitude={lon}&current=european_aqi,pm2_5&hourly=european_aqi&past_days=7&forecast_days=1"
 
-antwort = requests.get(url)
-data = antwort.json()
+try:
+    antwort = requests.get(url, timeout=10)
+    antwort.raise_for_status()
+    data = antwort.json()
+    
+    aqi_aktuell = data["current"]["european_aqi"]
+    pm25_aktuell = data["current"]["pm2_5"]
 
-aqi_aktuell = data["current"]["european_aqi"]
-pm25_aktuell = data["current"]["pm2_5"]
+except Exception:
+    st.error("Es gibt Probleme mit der API!")
+    st.stop()
 
 
 # --- Logik ---
@@ -37,15 +43,21 @@ anzahl_baeume = 38
 gesunde_baeume = int(anzahl_baeume * (health/100))
 kranke_baeume = anzahl_baeume - gesunde_baeume
 
-if health >= 75:
-    zustand = "Dem Wald geht es prima!"
-    emoji_diagramm = "🌲" * gesunde_baeume + "🍃" * kranke_baeume
-elif health >= 50:
-    zustand = "Der Wald atmet schwerer!"
-    emoji_diagramm = "🌳" * gesunde_baeume + "🍂" * kranke_baeume
+if health >= 80:
+    zustand = "Der Wald blüht!"
+    emoji_diagramm = "🌳" * gesunde_baeume + "🪵" * kranke_baeume
+elif health >= 60:
+    zustand = "Der Wald ist stabil!"
+    emoji_diagramm = "🌳" * gesunde_baeume + "🪵" * kranke_baeume
+elif health >= 40:
+    zustand = "Der Wald ist belastet!"
+    emoji_diagramm = "🌳" * gesunde_baeume + "🪵" * kranke_baeume
+elif health >= 20:
+    zustand = "Der Wald ist krank!"
+    emoji_diagramm = "🌳" * gesunde_baeume + "🪵" * kranke_baeume
 else:
     zustand = "Der Wald ist in Gefahr!"
-    emoji_diagramm = "🍂" * gesunde_baeume + "🪵" * kranke_baeume
+    emoji_diagramm = "🌳" * gesunde_baeume + "🪵" * kranke_baeume
 
 
 # --- Darstellung aktueller Zustand ---
