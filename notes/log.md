@@ -17,9 +17,24 @@
 - "git push" upload
 
 ### Environment
-- "python3 -m venv .venv" create environment
-- "source .venv/bin/activate" activate
-- STRG + SHIFT + P choose it in VSCode
-- "deactivate" deactivate the envirnoment
+1. pwd
+2. python3 -m venv .venv
+3. source .venv/bin/activate
+4. which python
+5. python -c "import sys; print(sys.prefix)"
+6. python -m pip install --upgrade pip
+7. python -m pip install "packet"
+- "deactivate" deactivate envirnoment
 - "nano .gitignore" -> STRG + O to save -> STRG + X to exit
-- 
+
+### Pakete
+- requests = Daten aus dem Internet holen
+- panda = Daten analysieren und bearbeiten
+- streamlit = Web-Oberfläche
+
+### Daten
+- https://github.com/public-apis/public-apis
+- https://github.com/paytience/FindAPIs#1
+- https://github.com/public-api-lists/public-api-lists
+- https://apis.io/
+- https://bund.dev/
